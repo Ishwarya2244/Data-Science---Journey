@@ -1,0 +1,28 @@
+import pandas as pd
+
+
+data = {
+    "Name": ["Ravi", "Priya", "Kiran", "Sneha", "Arjun"],
+    "City": ["Chennai", "Bangalore", "Hosur", "Mumbai", "Delhi"],
+    "Age": [21, 23, 22, 24, 21],
+    "Marks": [75, 88, 92, 65, 80]
+}
+df=pd.DataFrame(data)
+print(df)
+
+#1.Print only Name and Marks columns
+print(df[['Name','Marks']])
+
+#2.Filter students who scored more than 80
+print(df[df['Marks']>80])
+
+
+
+#3.Find the average marks
+print(df['Marks'].mean())
+
+
+#4.Add a column called "Result" — "Pass" if marks > 70 else "Fail"
+
+df['Result']=df['Marks'].apply(lambda x: 'Pass' if x>70 else 'False')
+print(df)
