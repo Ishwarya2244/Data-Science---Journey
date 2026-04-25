@@ -12,3 +12,11 @@ df.sort_values("col")  # sort
 df["col"].mean()       # average
 df["col"].max()        # maximum
 df["col"].min()        # minimum
+idxmax()   # to print most highest count 
+# instead of this 
+for x in arr:
+    if x % 2 == 0:
+        print(x)
+
+# But also know the NumPy way
+print(arr[arr % 2 == 0])  # one line — faster!
