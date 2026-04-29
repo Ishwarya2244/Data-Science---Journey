@@ -1,0 +1,30 @@
+import numpy as np 
+flips=np.random.randint(0,2,1000)
+heads=np.sum(flips==1)
+print(heads/1000)
+
+marks=np.random.normal(60,10,1000)
+print(np.mean(marks).round(2))
+print(np.sum(marks>85))
+print(np.sum(marks<55))
+
+import pandas as pd
+data=pd.Series([10,12,13,14,15,50,80])
+print("Skewness:",data.skew())
+
+import numpy as np
+import pandas as pd
+dice=np.random.randint(1,7,600)
+for i in range(1,7):
+  prob=np.sum(dice==i)/600
+  print(f"p({i})=",round(prob,3))
+  
+
+marks=np.random.normal(70,15,500)
+print("Mean:",np.mean(marks).round(2))
+print("std:",np.std(marks).round(2))
+print("above 85:",np.sum(marks>85))
+print("below 55:",np.sum(marks<55))
+
+data=pd.Series([10,12,13,14,15,15,16,50,80])
+print("Skewness",data.skew())
